@@ -1790,10 +1790,10 @@ void Clipper::AppendPolygon(TEdge *e1, TEdge *e2)
   }
 
   //fixup hole status ...
-  if (outRec1->isHole != outRec2->isHole)
-    if (holeStateRec == outRec2)
-      outRec1->isHole = outRec2->isHole; else
-      outRec2->isHole = outRec1->isHole;
+  if (outRec1->isHole != outRec2->isHole) {
+    if (holeStateRec == outRec2) outRec1->isHole = outRec2->isHole; 
+    else outRec2->isHole = outRec1->isHole;
+  }
 
   OutPt* p1_lft = outRec1->pts;
   OutPt* p1_rt = p1_lft->prev;
