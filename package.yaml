@@ -1,0 +1,30 @@
+name:                clipper 
+version:             0.0.2
+license:             BSD3
+author:              "Chetan Taralekar"
+maintainer:          "Chetan Taralekar <chetant@gmail.com>"
+copyright:           "2011 Chetan Taralekar"
+build-type:          Custom
+github:              igraves/clipper
+category:            Geometry
+synopsis:            "Native bindings to the Clipper library"
+
+extra-source-files:
+- README
+- cbits/clipper.hpp
+- cbits/clipper.cpp
+- cbits/README
+- cbits/License.txt
+
+description:         Native bindings to the clipper library.  Work in progress to update to latest version.
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  build-tools: hsc2hs
+  include-dirs: cbits
+  c-sources: cbits/clipper.cpp
+  extra-libraries: stdc++
+  exposed-modules:
+   - Algebra.Clipper

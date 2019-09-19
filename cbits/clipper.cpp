@@ -38,6 +38,10 @@
 #include <cstring>
 #include <cstdlib>
 #include <stdio.h>
+#include <string>
+#include <sstream>
+#include <iostream>
+#include <array>
 
 //Workaround for older compilers that don't have std::abs
 #if (__GNUC__ == 2 && __GNUC_MINOR__ <= 97) || (defined(_MSC_VER) && _MSC_VER <= 1310)

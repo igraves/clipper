@@ -30,6 +30,7 @@
 #include <stdexcept>
 #include <cstring>
 #include <cstdlib>
+#include <string>
 
 enum ClipType { ctIntersection=0x1, ctUnion=0x2, ctDifference=0x3, ctXor=0x4 };
 enum PolyType { ptSubject=0x1, ptClip=0x2 };

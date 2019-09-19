@@ -57,6 +57,9 @@ type PolygonPtr = Ptr Polygon
 
 getPoints (Polygon ps) = ps
 
+instance Semigroup Polygon where
+    (<>) (Polygon x) (Polygon y) = Polygon (x <> y)
+
 instance Monoid Polygon where
     mempty = Polygon mempty
     mappend (Polygon x) (Polygon y) = Polygon (x `mappend` y)
@@ -79,6 +82,9 @@ getPolys (Polygons ps) = ps
 
 size (Polygon ps) = fromIntegral $ length ps
 sizes (Polygons ps) = fromIntegral $ length ps
+
+instance Semigroup Polygons where
+   (<>) (Polygons x) (Polygons y) = Polygons (x <> y) 
 
 instance Monoid Polygons where
     mempty = Polygons mempty
